@@ -3,6 +3,7 @@
 const app = require('../app.js')
 
 const signUpSuccess = function (data) {
+  console.log('sign up ran')
   $('#message').text('Signed up successfully')
   console.log(data)
 }

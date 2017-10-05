@@ -1,14 +1,14 @@
 'use strict'
 
 const getFormFields = require(`../../../lib/get-form-fields`)
-const api = require('./api')
-const ui = require('./ui')
+const api = require('./api.js')
+const ui = require('./ui.js')
 
 const onSignUp = function (event) {
   event.preventDefault()
-  console.log('sign up good!')
+  console.log('sign up ran!')
 
-  const data = getFormFields(this)
+  const data = getFormFields(event.target)
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
@@ -16,9 +16,9 @@ const onSignUp = function (event) {
 
 const onSignIn = function (event) {
   event.preventDefault()
-  console.log('sign in good!')
+  console.log('sign in ran!')
 
-  const data = getFormFields(this)
+  const data = getFormFields(event.target)
   api.signIn(data)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
@@ -26,7 +26,7 @@ const onSignIn = function (event) {
 
 const onSignOut = function (event) {
   event.preventDefault()
-  console.log('sign out good')
+  console.log('sign out ran')
 
   api.signOut()
     .then(ui.signOutSuccess)
@@ -35,9 +35,9 @@ const onSignOut = function (event) {
 
 const onChangePassword = function (event) {
   event.preventDefault()
-  console.log('change password good!')
+  console.log('change password ran!')
 
-  const data = getFormFields(this)
+  const data = getFormFields(event.target)
   api.changePassword(data)
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)
