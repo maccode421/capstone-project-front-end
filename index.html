@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>CarLog</title>
+  <title>AutoLogInit</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,36 +19,41 @@
 </head>
 
 <body>
-  <h1>CarLog</h1>
+  <h1>AutoLogInit</h1>
 
   <p id="message"></p>
   <form id="sign-up">
     <input class="input" type="text" name="credentials[email]" value="" placeholder="email">
     <input class="input" type="password" name="credentials[password]" value="" placeholder="password">
     <input class="input" type="password" name="credentials[password_confirmation]" value="" placeholder="confirm password">
-    <input type="submit" name="submit" value="Sign up">
+    <input class="btn btn-primary" type="submit" value="Sign up">
+    <!-- <input type="submit" name="submit" value="Sign up"> -->
   </form>
 
   <form id="change-password">
     <input class="input" type="password" name="credentials[old]" value="" placeholder="old password">
     <input class="input" type="password" name="credentials[new]" value="" placeholder="new password">
-    <input type="submit" name="submit" value="Change Password">
+    <input class="btn btn-primary" type="submit" value="Change Password">
+    <!-- <input type="submit" name="submit" value="Change Password"> -->
   </form>
 
   <form id="sign-in">
     <input class="input" type="text" name="credentials[email]" value="" placeholder="email">
     <input class="input" type="password" name="credentials[password]" value="" placeholder="password">
-    <input type="submit" name="submit" value="Sign in">
+    <input class="btn btn-primary" type="submit" value="Sign in">
+    <!-- <input type="submit" name="submit" value="Sign in"> -->
   </form>
 
   <form id="sign-out">
-    <input type="submit" name="submit" value="Sign out">
+    <input class="btn btn-primary" type="submit" value="Sign out">
+    <!-- <input type="submit" name="submit" value="Sign out"> -->
   </form>
 
   <!-- VEHICLES -->
-  <button id="get-vehicles">Get vehicle</button>
   <p id="getVehicles"></p>
-  <form>
+  <button id="get-vehicles" class="btn btn-primary" type="submit">Get vehicle</button>
+
+  <form class="table">
   <table border="1">
     <tr>
       <th>Vehicle Info</th>
@@ -82,7 +87,7 @@
 </form>
 
   <!-- VEHICLE_LOGS -->
-  <form>
+  <form class="tables">
   <table border="1">
     <tr>
       <th>Vehicle Log</th>
@@ -126,11 +131,7 @@
   </table>
   <button class="btn btn-primary" type="submit">Submit</button>
 </form>
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
