@@ -4,21 +4,21 @@ const app = require('../app.js')
 
 const getVehicles = function (data) {
   return $.ajax({
-    url: app.host + 'vehicles/',
+    url: app.host + '/vehicles/',
     method: 'GET'
   })
 }
 
 const getUserVehicles = function (data) {
   return $.ajax({
-    url: app.host + 'vehicles/' + app.user.id,
+    url: app.host + '/vehicles/' + app.user.id,
     method: 'GET'
   })
 }
 
 const createVehicle = function (data) {
   return $.ajax({
-    url: app.host + 'vehicles/',
+    url: app.host + '/vehicles/',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + app.user.token
@@ -37,7 +37,7 @@ const createVehicle = function (data) {
 
 const updateVehicle = function (data) {
   return $.ajax({
-    url: app.host + 'vehicles/' + app.user.id + '/' + data.credentials._id,
+    url: app.host + '/vehicles/' + app.user.id + '/' + data.credentials._id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + app.user.token
@@ -49,7 +49,7 @@ const updateVehicle = function (data) {
 
 const deleteVehicle = function (data) {
   return $.ajax({
-    url: app.host + 'vehicles/' + data,
+    url: app.host + '/vehicles/' + data,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + app.user.token
